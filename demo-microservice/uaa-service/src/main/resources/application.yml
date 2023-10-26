@@ -38,4 +38,6 @@ logging:
 # management:
 #   security:
 #     enabled: false
- 
+jwt:
+  secret: "tz6sAA3jZxcamyqGVwShXl7MqACyE26WYRwrHl8FO1A="
+  expiration: 2592000000 # 30 days in milliseconds

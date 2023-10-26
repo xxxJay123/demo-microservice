@@ -1,47 +1,57 @@
 package com.xxxjay123.uaa.uaaservice.entity;
 
 import java.util.*;
+import java.util.stream.Collectors;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import jakarta.persistence.*;
 import lombok.Data;
+import com.xxxjay123.uaa.uaaservice.entity.Roles.RoleType;
 
 @Entity
 @Data
-public class User implements UserDetails{
-  @Id
+public class User implements UserDetails {
+	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(nullable = false,  unique = true)
+	@Column(nullable = false, unique = true)
 	private String username;
 
 	@Column
 	private String password;
+	
+  @ManyToMany(mappedBy = "users", cascade = CascadeType.ALL,
+      fetch = FetchType.EAGER)
+	private Set<Roles> roles = new HashSet<>();
 
-	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
-			inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
-	private List<Role> authorities;
-
-
-	public User() {
-	}
 
 	public Long getId() {
 		return id;
 	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return authorities;
+		return roles.stream()
+				.map(
+						role -> new SimpleGrantedAuthority("ROLE_" + role.getName().name()))
+				.collect(Collectors.toList());
 	}
 
-	public void setAuthorities(List<Role> authorities) {
-		this.authorities = authorities;
+	public void addRole(Roles.RoleType roleType) {
+		Roles roles = new Roles(); // Create a Roles object
+		roles.setName(roleType); // Set the RoleType enum to the Roles object
+		this.roles.add(roles); // Add the Roles object to the user's roles
+		roles.getUsers().add(this); // Ensure bidirectional relationship is maintained
+	}
+
+	public void setAuthorities(Set<Roles> authorities) {
+		this.roles = authorities;
 	}
 
 	@Override

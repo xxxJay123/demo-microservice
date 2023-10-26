@@ -5,4 +5,7 @@ import com.xxxjay123.uaa.uaaservice.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
   User findByUsername(String username);
+
+
+  Boolean existsByUsername(String username);
 }
