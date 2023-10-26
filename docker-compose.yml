@@ -1,0 +1,83 @@
+version: '3'
+services:
+  # Discovery Service
+  discovery-service:
+    build:
+      context: ./discovery-service
+      dockerfile: Dockerfile
+    ports:
+      - "8761:8761"
+    networks:
+      - my-network
+    # Add environment variables if necessary
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+
+  # Gateway Service
+  gateway-service:
+    build:
+      context: ./gateway-service
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - my-network
+    # Add environment variables if necessary
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+
+  # Config Server
+  config-server:
+    build:
+      context: ./configure-service
+      dockerfile: Dockerfile
+    ports:
+      - "8888:8888"
+    networks:
+      - my-network
+    # Add environment variables if necessary
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+
+  # LDAP Service
+  ldap-service:
+    build:
+      context: ./ldap-service
+      dockerfile: Dockerfile
+    ports:
+      - "389:389"
+    networks:
+      - my-network
+    # Add environment variables if necessary
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+
+  # Product Service
+  product-service:
+    build:
+      context: ./product-service
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    networks:
+      - my-network
+    # Add environment variables if necessary
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+
+  # UAA Service
+  uaa-service:
+    build:
+      context: ./uaa-service
+      dockerfile: Dockerfile
+    ports:
+      - "9191:9191"
+    networks:
+      - my-network
+    # Add environment variables if necessary
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+
+networks:
+  my-network:
+    driver: bridge

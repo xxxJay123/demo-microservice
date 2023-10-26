@@ -1,0 +1,11 @@
+**/*.log
+**/*.txt
+**/*.md
+**/*.yml
+**/*.properties
+.idea
+.vscode
+/target/
+/.git/
+/.mvn/
+*.iml

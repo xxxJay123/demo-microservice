@@ -1,13 +1,16 @@
 列出資料夾 PATH
 磁碟區序號為 F4B6-6877
 C:.
+|   .dockerignore
 |   .gitignore
 |   dependency-tree.txt
+|   docker-compose.yml
 |   HELP.md
 |   mvnw
 |   mvnw.cmd
 |   ouput.txt
 |   pom.xml
+|   README.md
 |   
 +---.mvn
 |   \---wrapper
@@ -39,6 +42,7 @@ C:.
 |                               
 +---configure-service
 |   |   .gitignore
+|   |   Dockerfile
 |   |   HELP.md
 |   |   mvnw
 |   |   mvnw.cmd
@@ -120,6 +124,7 @@ C:.
 |                               
 +---discovery-service
 |   |   .gitignore
+|   |   Dockerfile
 |   |   HELP.md
 |   |   mvnw
 |   |   mvnw.cmd
@@ -198,6 +203,7 @@ C:.
 |                               
 +---gateway-service
 |   |   .gitignore
+|   |   Dockerfile
 |   |   HELP.md
 |   |   mvnw
 |   |   mvnw.cmd
@@ -276,6 +282,7 @@ C:.
 |       |                   inputFiles.lst
 |       |                   
 |       +---surefire-reports
+|       |       2023-10-26T23-39-40_624-jvmRun1.dump
 |       |       com.xxxjay123.gateway.gatewayservice.GatewayServiceApplicationTests.txt
 |       |       TEST-com.xxxjay123.gateway.gatewayservice.GatewayServiceApplicationTests.xml
 |       |       
@@ -288,6 +295,7 @@ C:.
 |                               
 +---ldap-service
 |   |   .gitignore
+|   |   Dockerfile
 |   |   HELP.md
 |   |   mvnw
 |   |   mvnw.cmd
@@ -357,15 +365,9 @@ C:.
 |       |                   |       SwaggerConfig.class
 |       |                   |       WebSecurityConfig.class
 |       |                   |       
-|       |                   +---controller
-|       |                   |       LDAPController.class
-|       |                   |       
-|       |                   +---entity
-|       |                   +---exception
-|       |                   +---model
-|       |                   +---repository
-|       |                   +---service
-|       |                   \---utils
+|       |                   \---controller
+|       |                           LDAPController.class
+|       |                           
 |       +---generated-sources
 |       |   \---annotations
 |       +---generated-test-sources
@@ -398,6 +400,7 @@ C:.
 |                               
 +---product-service
 |   |   .gitignore
+|   |   Dockerfile
 |   |   HELP.md
 |   |   mvnw
 |   |   mvnw.cmd
@@ -462,7 +465,6 @@ C:.
 |       |               \---productservice
 |       |                   |   ProductServiceApplication.class
 |       |                   |   
-|       |                   +---config
 |       |                   +---controller
 |       |                   |       ProductController.class
 |       |                   |       
@@ -470,15 +472,12 @@ C:.
 |       |                   |       Product$ProductBuilder.class
 |       |                   |       Product.class
 |       |                   |       
-|       |                   +---exception
-|       |                   +---model
 |       |                   +---repository
 |       |                   |       ProductRepository.class
 |       |                   |       
-|       |                   +---service
-|       |                   |       ProductService.class
-|       |                   |       
-|       |                   \---utils
+|       |                   \---service
+|       |                           ProductService.class
+|       |                           
 |       +---generated-sources
 |       |   \---annotations
 |       +---generated-test-sources
@@ -511,6 +510,7 @@ C:.
 |                               
 \---uaa-service
     |   .gitignore
+    |   Dockerfile
     |   HELP.md
     |   mvnw
     |   mvnw.cmd
@@ -602,7 +602,6 @@ C:.
         |                   |   \---Impl
         |                   |           CustomUserDetails.class
         |                   |           
-        |                   +---exception
         |                   +---model
         |                   |       AuthenticationRequest.class
         |                   |       AuthenticationResponse.class
