@@ -1,15 +1,15 @@
 package com.xxxjay123.uaa.uaaservice.entity.Impl;
 
 import java.util.Collection;
-import java.util.Collections;
+
 import java.util.stream.Collectors;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import com.xxxjay123.uaa.uaaservice.entity.User;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
+@Data
 public class CustomUserDetails implements UserDetails {
   private final User user;
   private final String token;

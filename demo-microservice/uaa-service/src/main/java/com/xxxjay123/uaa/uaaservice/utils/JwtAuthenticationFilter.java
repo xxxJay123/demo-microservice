@@ -1,25 +1,19 @@
 package com.xxxjay123.uaa.uaaservice.utils;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.Ordered;
-import org.springframework.core.annotation.Order;
+
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 import com.xxxjay123.uaa.uaaservice.service.CustomUserDetailsService;
-import io.jsonwebtoken.ExpiredJwtException;
 import org.springframework.util.StringUtils;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import java.io.IOException;
@@ -49,7 +43,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     String token = getJWTFromRequest(request);
     if (StringUtils.hasText(token) && jwtTokenUtil.validateTokens(token)) {
       String username = jwtTokenUtil.getUsernameFromToken(token);
-
+      log.info("username: {}", username);
       UserDetails userDetails = userDetailsService.loadUserByUsername(username);
       if (userDetails != null) {
         UsernamePasswordAuthenticationToken authenticationToken =
@@ -59,11 +53,12 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             new WebAuthenticationDetailsSource().buildDetails(request));
         SecurityContextHolder.getContext()
             .setAuthentication(authenticationToken);
+
+        filterChain.doFilter(request, response);
+
       }
-      filterChain.doFilter(request, response);
 
     }
-
   }
 
   private String getJWTFromRequest(HttpServletRequest request) {
@@ -85,3 +80,4 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
   }
 
 }
+
