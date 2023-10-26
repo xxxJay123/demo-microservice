@@ -1,0 +1,42 @@
+
+spring:
+  application:
+    name: configure-service
+  # cloud:
+  #   config:
+  #     uri: http://localhost:8769
+  #     fail-fast: true
+  profiles:
+      active: pro
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/configure
+    username: root
+    password: Jay40984692$
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        # dialect: org.hibernate.dialect.PostgreSQLDialect
+  main:
+    allow-bean-definition-overriding: true
+
+logging:
+  level:
+    org: WARN
+    hibernate:
+      SQL: DEBUG
+      type:
+        descriptor: TRACE
+    blog: WARN
+    springframework: 
+      security: DEBUG
+
+# management:
+#   security:
+#     enabled: false
+ 
