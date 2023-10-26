@@ -1,8 +1,5 @@
 package com.xxxjay123.ldap.ldapservice.config;
 
-import io.swagger.v3.oas.annotations.OpenAPI31;
-import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
-import io.swagger.v3.oas.annotations.security.SecuritySchemes;
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;

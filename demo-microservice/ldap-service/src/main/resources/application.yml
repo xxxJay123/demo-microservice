@@ -10,14 +10,6 @@ spring:
     password: Jay40984692$
     driver-class-name: com.mysql.jdbc.Driver
 
-  ldap:
-    urls: ldap://your-ldap-server:389
-    base: dc=example,dc=com
-    username: cn=admin,dc=example,dc=com
-    password: admin-password
-    baseEnvironment:
-      javax.naming.security.principal: cn=admin,dc=example,dc=com
-      javax.naming.security.credentials: admin-password
   jpa:
     hibernate:
       ddl-auto: update
@@ -26,8 +18,13 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
   main:
-      allow-bean-definition-overriding: true
+    allow-bean-definition-overriding: true
 
+  ldap:
+    embedded:
+      ldif: classpath:test-server.ldif
+      base-dn: cn=admin,dc=example,dc=com
+      port: 8389
 
 logging:
   level:
@@ -37,5 +34,5 @@ logging:
       type:
         descriptor: TRACE
     blog: WARN
-    springframework: 
+    springframework:
       security: DEBUG

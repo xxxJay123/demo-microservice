@@ -1,0 +1,11 @@
+dn: cn=user,ou=groups,dc=example,dc=com
+objectclass: groupOfUniqueNames
+cn: user
+
+dn: cn=editor,ou=groups,dc=example,dc=com  
+objectclass: groupOfUniqueNames
+cn: editor
+
+dn: cn=product_admin,ou=groups,dc=example,dc=com
+objectclass: groupOfUniqueNames
+cn: product_admin

@@ -1,32 +1,45 @@
 package com.xxxjay123.ldap.ldapservice.config;
 
-import org.springframework.context.annotation.Bean;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
-import org.springframework.security.config.Customizer;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
-import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig {
-  @Bean
-  public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-    return http
-        .authorizeHttpRequests(authorizeHttpRequests -> authorizeHttpRequests
-            .requestMatchers(HttpMethod.GET, "/api/private").authenticated()
-            .requestMatchers(HttpMethod.GET, "/api/public").permitAll()
-            .requestMatchers(HttpMethod.GET, "/actuator/**").permitAll()
-            .requestMatchers("/swagger-ui.html", "/swagger-ui/**",
-                "/v3/api-docs", "/v3/api-docs/**")
-            .permitAll().anyRequest().authenticated())
-        .httpBasic(Customizer.withDefaults())
-        .sessionManagement(sessionManagement -> sessionManagement
-            .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-        .csrf(AbstractHttpConfigurer::disable)
-        .cors(AbstractHttpConfigurer::disable).build();
-  }
+/*    @Bean
+ SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+		http//
+			.authorizeRequests()//
+				.anyRequest().fullyAuthenticated()//
+				.and()//
+			.formLogin();//
+
+		return http.build();//
+	}//
+ */
+	@Autowired
+	public void configure(AuthenticationManagerBuilder auth) throws Exception {
+		auth
+			.ldapAuthentication()//
+				.userDnPatterns("uid={0},ou=people")//
+				.groupSearchBase("ou=groups")//
+				.groupSearchFilter("member={0}")//
+				.groupRoleAttribute("cn")//
+				.rolePrefix("ROLE_")
+				.contextSource()//
+					.url("ldap://localhost:8389/dc=springframework,dc=org")//
+					.and()//
+				.passwordCompare()//
+					.passwordEncoder(new BCryptPasswordEncoder())//
+					.passwordAttribute("userPassword");//
+	}
+
 }
+
+
