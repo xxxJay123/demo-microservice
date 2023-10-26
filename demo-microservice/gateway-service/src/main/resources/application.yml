@@ -1,3 +1,9 @@
+server:
+  port: 7573
+  servlet:
+    context-path: /  # Optional: Root context path
+  ssl:
+    enabled: false   # Disable HTTPS
 spring:
   application:
     name: gateway-service
@@ -19,6 +25,7 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
   main:
       allow-bean-definition-overriding: true
+      web-application-type: REACTIVE
 
 
 logging:

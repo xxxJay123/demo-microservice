@@ -1,0 +1,650 @@
+列出資料夾 PATH
+磁碟區序號為 F4B6-6877
+C:.
+|   .gitignore
+|   dependency-tree.txt
+|   HELP.md
+|   mvnw
+|   mvnw.cmd
+|   ouput.txt
+|   pom.xml
+|   
++---.mvn
+|   \---wrapper
+|           maven-wrapper.jar
+|           maven-wrapper.properties
+|           
++---.vscode
++---buildSrc
+|   +---main
+|   |   +---java
+|   |   |   \---com
+|   |   |       \---xxxjay123
+|   |   |           \---demomicroservice
+|   |   |               \---demomicroservic
+|   |   |                       DemoMicroservicApplication.java
+|   |   |                       
+|   |   \---resources
+|   |       |   application.properties
+|   |       |   
+|   |       +---static
+|   |       \---templates
+|   \---test
+|       \---java
+|           \---com
+|               \---xxxjay123
+|                   \---demomicroservice
+|                       \---demomicroservic
+|                               DemoMicroservicApplicationTests.java
+|                               
++---configure-service
+|   |   .gitignore
+|   |   HELP.md
+|   |   mvnw
+|   |   mvnw.cmd
+|   |   pom.xml
+|   |   
+|   +---.mvn
+|   |   \---wrapper
+|   |           maven-wrapper.jar
+|   |           maven-wrapper.properties
+|   |           
+|   +---.vscode
+|   |       NEWLY_CREATED_BY_SPRING_INITIALIZR
+|   |       
+|   +---src
+|   |   +---main
+|   |   |   +---java
+|   |   |   |   \---com
+|   |   |   |       \---xxxjay123
+|   |   |   |           \---configureservice
+|   |   |   |               \---configureservice
+|   |   |   |                       ConfigureServiceApplication.java
+|   |   |   |                       
+|   |   |   \---resources
+|   |   |       |   application.yml
+|   |   |       |   banner.txt
+|   |   |       |   
+|   |   |       \---configurations
+|   |   \---test
+|   |       \---java
+|   |           \---com
+|   |               \---xxxjay123
+|   |                   \---configureservice
+|   |                       \---configureservice
+|   |                               ConfigureServiceApplicationTests.java
+|   |                               
+|   \---target
+|       |   configure-service-0.0.1-SNAPSHOT.jar
+|       |   configure-service-0.0.1-SNAPSHOT.jar.original
+|       |   
+|       +---classes
+|       |   |   application.yml
+|       |   |   banner.txt
+|       |   |   
+|       |   \---com
+|       |       \---xxxjay123
+|       |           \---configureservice
+|       |               \---configureservice
+|       |                       ConfigureServiceApplication.class
+|       |                       
+|       +---generated-sources
+|       |   \---annotations
+|       +---generated-test-sources
+|       |   \---test-annotations
+|       +---maven-archiver
+|       |       pom.properties
+|       |       
+|       +---maven-status
+|       |   \---maven-compiler-plugin
+|       |       +---compile
+|       |       |   \---default-compile
+|       |       |           createdFiles.lst
+|       |       |           inputFiles.lst
+|       |       |           
+|       |       \---testCompile
+|       |           \---default-testCompile
+|       |                   createdFiles.lst
+|       |                   inputFiles.lst
+|       |                   
+|       +---surefire-reports
+|       |       com.xxxjay123.configureservice.configureservice.ConfigureServiceApplicationTests.txt
+|       |       TEST-com.xxxjay123.configureservice.configureservice.ConfigureServiceApplicationTests.xml
+|       |       
+|       \---test-classes
+|           \---com
+|               \---xxxjay123
+|                   \---configureservice
+|                       \---configureservice
+|                               ConfigureServiceApplicationTests.class
+|                               
++---discovery-service
+|   |   .gitignore
+|   |   HELP.md
+|   |   mvnw
+|   |   mvnw.cmd
+|   |   pom.xml
+|   |   
+|   +---.mvn
+|   |   \---wrapper
+|   |           maven-wrapper.jar
+|   |           maven-wrapper.properties
+|   |           
+|   +---.vscode
+|   |       NEWLY_CREATED_BY_SPRING_INITIALIZR
+|   |       
+|   +---src
+|   |   +---main
+|   |   |   +---java
+|   |   |   |   \---com
+|   |   |   |       \---xxxjay123
+|   |   |   |           \---discoveryservice
+|   |   |   |               \---discoveryservice
+|   |   |   |                       DiscoveryServiceApplication.java
+|   |   |   |                       
+|   |   |   \---resources
+|   |   |           application.yml
+|   |   |           
+|   |   \---test
+|   |       \---java
+|   |           \---com
+|   |               \---xxxjay123
+|   |                   \---discoveryservice
+|   |                       \---discoveryservice
+|   |                               DiscoveryServiceApplicationTests.java
+|   |                               
+|   \---target
+|       |   discovery-service-0.0.1-SNAPSHOT.jar
+|       |   discovery-service-0.0.1-SNAPSHOT.jar.original
+|       |   
+|       +---classes
+|       |   |   application.yml
+|       |   |   
+|       |   \---com
+|       |       \---xxxjay123
+|       |           \---discoveryservice
+|       |               \---discoveryservice
+|       |                       DiscoveryServiceApplication.class
+|       |                       
+|       +---generated-sources
+|       |   \---annotations
+|       +---generated-test-sources
+|       |   \---test-annotations
+|       +---maven-archiver
+|       |       pom.properties
+|       |       
+|       +---maven-status
+|       |   \---maven-compiler-plugin
+|       |       +---compile
+|       |       |   \---default-compile
+|       |       |           createdFiles.lst
+|       |       |           inputFiles.lst
+|       |       |           
+|       |       \---testCompile
+|       |           \---default-testCompile
+|       |                   createdFiles.lst
+|       |                   inputFiles.lst
+|       |                   
+|       +---surefire-reports
+|       |       com.xxxjay123.discoveryservice.discoveryservice.DiscoveryServiceApplicationTests.txt
+|       |       TEST-com.xxxjay123.discoveryservice.discoveryservice.DiscoveryServiceApplicationTests.xml
+|       |       
+|       \---test-classes
+|           \---com
+|               \---xxxjay123
+|                   \---discoveryservice
+|                       \---discoveryservice
+|                               DiscoveryServiceApplicationTests.class
+|                               
++---gateway-service
+|   |   .gitignore
+|   |   HELP.md
+|   |   mvnw
+|   |   mvnw.cmd
+|   |   pom.xml
+|   |   
+|   +---.mvn
+|   |   \---wrapper
+|   |           maven-wrapper.jar
+|   |           maven-wrapper.properties
+|   |           
+|   +---.vscode
+|   |       NEWLY_CREATED_BY_SPRING_INITIALIZR
+|   |       
+|   +---src
+|   |   +---main
+|   |   |   +---java
+|   |   |   |   \---com
+|   |   |   |       \---xxxjay123
+|   |   |   |           \---gateway
+|   |   |   |               \---gatewayservice
+|   |   |   |                   |   GatewayServiceApplication.java
+|   |   |   |                   |   
+|   |   |   |                   \---filter
+|   |   |   |                           FilterUtils.java
+|   |   |   |                           ResponseFilter.java
+|   |   |   |                           TrackingFilter.java
+|   |   |   |                           
+|   |   |   \---resources
+|   |   |       |   application.yml
+|   |   |       |   
+|   |   |       +---static
+|   |   |       \---templates
+|   |   \---test
+|   |       \---java
+|   |           \---com
+|   |               \---xxxjay123
+|   |                   \---gateway
+|   |                       \---gatewayservice
+|   |                               GatewayServiceApplicationTests.java
+|   |                               
+|   \---target
+|       |   gateway-service-0.0.1-SNAPSHOT.jar
+|       |   gateway-service-0.0.1-SNAPSHOT.jar.original
+|       |   
+|       +---classes
+|       |   |   application.yml
+|       |   |   
+|       |   \---com
+|       |       \---xxxjay123
+|       |           \---gateway
+|       |               \---gatewayservice
+|       |                   |   GatewayServiceApplication.class
+|       |                   |   
+|       |                   \---filter
+|       |                           FilterUtils.class
+|       |                           ResponseFilter.class
+|       |                           TrackingFilter.class
+|       |                           
+|       +---generated-sources
+|       |   \---annotations
+|       +---generated-test-sources
+|       |   \---test-annotations
+|       +---maven-archiver
+|       |       pom.properties
+|       |       
+|       +---maven-status
+|       |   \---maven-compiler-plugin
+|       |       +---compile
+|       |       |   \---default-compile
+|       |       |           createdFiles.lst
+|       |       |           inputFiles.lst
+|       |       |           
+|       |       \---testCompile
+|       |           \---default-testCompile
+|       |                   createdFiles.lst
+|       |                   inputFiles.lst
+|       |                   
+|       +---surefire-reports
+|       |       com.xxxjay123.gateway.gatewayservice.GatewayServiceApplicationTests.txt
+|       |       TEST-com.xxxjay123.gateway.gatewayservice.GatewayServiceApplicationTests.xml
+|       |       
+|       \---test-classes
+|           \---com
+|               \---xxxjay123
+|                   \---gateway
+|                       \---gatewayservice
+|                               GatewayServiceApplicationTests.class
+|                               
++---ldap-service
+|   |   .gitignore
+|   |   HELP.md
+|   |   mvnw
+|   |   mvnw.cmd
+|   |   pom.xml
+|   |   
+|   +---.mvn
+|   |   \---wrapper
+|   |           maven-wrapper.jar
+|   |           maven-wrapper.properties
+|   |           
+|   +---.vscode
+|   |       NEWLY_CREATED_BY_SPRING_INITIALIZR
+|   |       
+|   +---src
+|   |   +---main
+|   |   |   +---java
+|   |   |   |   \---com
+|   |   |   |       \---xxxjay123
+|   |   |   |           \---ldap
+|   |   |   |               \---ldapservice
+|   |   |   |                   |   LdapServiceApplication.java
+|   |   |   |                   |   
+|   |   |   |                   +---config
+|   |   |   |                   |       LdapAuthenticationConfig.java
+|   |   |   |                   |       SwaggerConfig.java
+|   |   |   |                   |       WebSecurityConfig.java
+|   |   |   |                   |       
+|   |   |   |                   +---controller
+|   |   |   |                   |       LDAPController.java
+|   |   |   |                   |       
+|   |   |   |                   +---entity
+|   |   |   |                   +---exception
+|   |   |   |                   +---model
+|   |   |   |                   +---repository
+|   |   |   |                   +---service
+|   |   |   |                   \---utils
+|   |   |   \---resources
+|   |   |       |   application.yml
+|   |   |       |   test-server.ldif
+|   |   |       |   
+|   |   |       +---static
+|   |   |       \---templates
+|   |   \---test
+|   |       \---java
+|   |           \---com
+|   |               \---xxxjay123
+|   |                   \---ldap
+|   |                       \---ldapservice
+|   |                               LdapServiceApplicationTests.java
+|   |                               
+|   \---target
+|       |   ldap-service-0.0.1-SNAPSHOT.jar
+|       |   ldap-service-0.0.1-SNAPSHOT.jar.original
+|       |   
+|       +---classes
+|       |   |   application.yml
+|       |   |   test-server.ldif
+|       |   |   
+|       |   \---com
+|       |       \---xxxjay123
+|       |           \---ldap
+|       |               \---ldapservice
+|       |                   |   LdapServiceApplication.class
+|       |                   |   
+|       |                   +---config
+|       |                   |       LdapAuthenticationConfig.class
+|       |                   |       SwaggerConfig.class
+|       |                   |       WebSecurityConfig.class
+|       |                   |       
+|       |                   +---controller
+|       |                   |       LDAPController.class
+|       |                   |       
+|       |                   +---entity
+|       |                   +---exception
+|       |                   +---model
+|       |                   +---repository
+|       |                   +---service
+|       |                   \---utils
+|       +---generated-sources
+|       |   \---annotations
+|       +---generated-test-sources
+|       |   \---test-annotations
+|       +---maven-archiver
+|       |       pom.properties
+|       |       
+|       +---maven-status
+|       |   \---maven-compiler-plugin
+|       |       +---compile
+|       |       |   \---default-compile
+|       |       |           createdFiles.lst
+|       |       |           inputFiles.lst
+|       |       |           
+|       |       \---testCompile
+|       |           \---default-testCompile
+|       |                   createdFiles.lst
+|       |                   inputFiles.lst
+|       |                   
+|       +---surefire-reports
+|       |       com.xxxjay123.ldap.ldapservice.LdapServiceApplicationTests.txt
+|       |       TEST-com.xxxjay123.ldap.ldapservice.LdapServiceApplicationTests.xml
+|       |       
+|       \---test-classes
+|           \---com
+|               \---xxxjay123
+|                   \---ldap
+|                       \---ldapservice
+|                               LdapServiceApplicationTests.class
+|                               
++---product-service
+|   |   .gitignore
+|   |   HELP.md
+|   |   mvnw
+|   |   mvnw.cmd
+|   |   pom.xml
+|   |   
+|   +---.mvn
+|   |   \---wrapper
+|   |           maven-wrapper.jar
+|   |           maven-wrapper.properties
+|   |           
+|   +---.vscode
+|   |       NEWLY_CREATED_BY_SPRING_INITIALIZR
+|   |       
+|   +---src
+|   |   +---main
+|   |   |   +---java
+|   |   |   |   \---com
+|   |   |   |       \---xxxjay123
+|   |   |   |           \---productservice
+|   |   |   |               \---productservice
+|   |   |   |                   |   ProductServiceApplication.java
+|   |   |   |                   |   
+|   |   |   |                   +---config
+|   |   |   |                   +---controller
+|   |   |   |                   |       ProductController.java
+|   |   |   |                   |       
+|   |   |   |                   +---entity
+|   |   |   |                   |       Product.java
+|   |   |   |                   |       
+|   |   |   |                   +---exception
+|   |   |   |                   +---model
+|   |   |   |                   +---repository
+|   |   |   |                   |       ProductRepository.java
+|   |   |   |                   |       
+|   |   |   |                   +---service
+|   |   |   |                   |       ProductService.java
+|   |   |   |                   |       
+|   |   |   |                   \---utils
+|   |   |   \---resources
+|   |   |       |   application.yml
+|   |   |       |   
+|   |   |       +---static
+|   |   |       \---templates
+|   |   \---test
+|   |       \---java
+|   |           \---com
+|   |               \---xxxjay123
+|   |                   \---productservice
+|   |                       \---productservice
+|   |                               ProductServiceApplicationTests.java
+|   |                               
+|   \---target
+|       |   product-service-0.0.1-SNAPSHOT.jar
+|       |   product-service-0.0.1-SNAPSHOT.jar.original
+|       |   
+|       +---classes
+|       |   |   application.yml
+|       |   |   
+|       |   \---com
+|       |       \---xxxjay123
+|       |           \---productservice
+|       |               \---productservice
+|       |                   |   ProductServiceApplication.class
+|       |                   |   
+|       |                   +---config
+|       |                   +---controller
+|       |                   |       ProductController.class
+|       |                   |       
+|       |                   +---entity
+|       |                   |       Product$ProductBuilder.class
+|       |                   |       Product.class
+|       |                   |       
+|       |                   +---exception
+|       |                   +---model
+|       |                   +---repository
+|       |                   |       ProductRepository.class
+|       |                   |       
+|       |                   +---service
+|       |                   |       ProductService.class
+|       |                   |       
+|       |                   \---utils
+|       +---generated-sources
+|       |   \---annotations
+|       +---generated-test-sources
+|       |   \---test-annotations
+|       +---maven-archiver
+|       |       pom.properties
+|       |       
+|       +---maven-status
+|       |   \---maven-compiler-plugin
+|       |       +---compile
+|       |       |   \---default-compile
+|       |       |           createdFiles.lst
+|       |       |           inputFiles.lst
+|       |       |           
+|       |       \---testCompile
+|       |           \---default-testCompile
+|       |                   createdFiles.lst
+|       |                   inputFiles.lst
+|       |                   
+|       +---surefire-reports
+|       |       com.xxxjay123.productservice.productservice.ProductServiceApplicationTests.txt
+|       |       TEST-com.xxxjay123.productservice.productservice.ProductServiceApplicationTests.xml
+|       |       
+|       \---test-classes
+|           \---com
+|               \---xxxjay123
+|                   \---productservice
+|                       \---productservice
+|                               ProductServiceApplicationTests.class
+|                               
+\---uaa-service
+    |   .gitignore
+    |   HELP.md
+    |   mvnw
+    |   mvnw.cmd
+    |   pom.xml
+    |   
+    +---.mvn
+    |   \---wrapper
+    |           maven-wrapper.jar
+    |           maven-wrapper.properties
+    |           
+    +---.vscode
+    |       NEWLY_CREATED_BY_SPRING_INITIALIZR
+    |       
+    +---src
+    |   +---main
+    |   |   +---java
+    |   |   |   \---com
+    |   |   |       \---xxxjay123
+    |   |   |           \---uaa
+    |   |   |               \---uaaservice
+    |   |   |                   |   UaaServiceApplication.java
+    |   |   |                   |   
+    |   |   |                   +---config
+    |   |   |                   |       PasswordEncoderConfig.java
+    |   |   |                   |       SecurityConfig.java
+    |   |   |                   |       
+    |   |   |                   +---controller
+    |   |   |                   |       AuthController.java
+    |   |   |                   |       
+    |   |   |                   +---entity
+    |   |   |                   |   |   Roles.java
+    |   |   |                   |   |   User.java
+    |   |   |                   |   |   
+    |   |   |                   |   \---Impl
+    |   |   |                   |           CustomUserDetails.java
+    |   |   |                   |           
+    |   |   |                   +---exception
+    |   |   |                   +---model
+    |   |   |                   |       AuthenticationRequest.java
+    |   |   |                   |       AuthenticationResponse.java
+    |   |   |                   |       RegisterRequest.java
+    |   |   |                   |       
+    |   |   |                   +---repository
+    |   |   |                   |       UserRepository.java
+    |   |   |                   |       
+    |   |   |                   +---service
+    |   |   |                   |       CustomUserDetailsService.java
+    |   |   |                   |       
+    |   |   |                   \---utils
+    |   |   |                           JwtAuthenticationFilter.java
+    |   |   |                           JwtTokenUtil.java
+    |   |   |                           
+    |   |   \---resources
+    |   |           application.yml
+    |   |           
+    |   \---test
+    |       \---java
+    |           \---com
+    |               \---xxxjay123
+    |                   \---uaa
+    |                       \---uaaservice
+    |                               UaaServiceApplicationTests.java
+    |                               
+    \---target
+        |   uaa-service-0.0.1-SNAPSHOT.jar
+        |   uaa-service-0.0.1-SNAPSHOT.jar.original
+        |   
+        +---classes
+        |   |   application.yml
+        |   |   
+        |   \---com
+        |       \---xxxjay123
+        |           \---uaa
+        |               \---uaaservice
+        |                   |   UaaServiceApplication.class
+        |                   |   
+        |                   +---config
+        |                   |       PasswordEncoderConfig.class
+        |                   |       SecurityConfig.class
+        |                   |       
+        |                   +---controller
+        |                   |       AuthController.class
+        |                   |       
+        |                   +---entity
+        |                   |   |   Roles$RoleType.class
+        |                   |   |   Roles.class
+        |                   |   |   User.class
+        |                   |   |   
+        |                   |   \---Impl
+        |                   |           CustomUserDetails.class
+        |                   |           
+        |                   +---exception
+        |                   +---model
+        |                   |       AuthenticationRequest.class
+        |                   |       AuthenticationResponse.class
+        |                   |       RegisterRequest.class
+        |                   |       
+        |                   +---repository
+        |                   |       UserRepository.class
+        |                   |       
+        |                   +---service
+        |                   |       CustomUserDetailsService.class
+        |                   |       
+        |                   \---utils
+        |                           JwtAuthenticationFilter.class
+        |                           JwtTokenUtil.class
+        |                           
+        +---generated-sources
+        |   \---annotations
+        +---generated-test-sources
+        |   \---test-annotations
+        +---maven-archiver
+        |       pom.properties
+        |       
+        +---maven-status
+        |   \---maven-compiler-plugin
+        |       +---compile
+        |       |   \---default-compile
+        |       |           createdFiles.lst
+        |       |           inputFiles.lst
+        |       |           
+        |       \---testCompile
+        |           \---default-testCompile
+        |                   createdFiles.lst
+        |                   inputFiles.lst
+        |                   
+        +---surefire-reports
+        |       com.xxxjay123.uaa.uaaservice.UaaServiceApplicationTests.txt
+        |       TEST-com.xxxjay123.uaa.uaaservice.UaaServiceApplicationTests.xml
+        |       
+        \---test-classes
+            \---com
+                \---xxxjay123
+                    \---uaa
+                        \---uaaservice
+                                UaaServiceApplicationTests.class
+                                

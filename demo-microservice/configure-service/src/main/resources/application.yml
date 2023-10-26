@@ -1,3 +1,5 @@
+server:
+  port: 9191
 
 spring:
   application:
@@ -7,7 +9,11 @@ spring:
   #     uri: http://localhost:8769
   #     fail-fast: true
   profiles:
-      active: pro
+      active: native
+  cloud:
+    config:
+      server:
+        search-locations=classpath: /configurations
 
   datasource:
     url: jdbc:mysql://localhost:3306/configure

@@ -7,7 +7,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import jakarta.persistence.*;
 import lombok.Data;
-import com.xxxjay123.uaa.uaaservice.entity.Roles.RoleType;
+
 
 @Entity
 @Data
