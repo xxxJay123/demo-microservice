@@ -4,16 +4,13 @@ server:
 spring:
   application:
     name: configure-service
-  # cloud:
-  #   config:
-  #     uri: http://localhost:8769
-  #     fail-fast: true
   profiles:
       active: native
   cloud:
     config:
       server:
-        search-locations=classpath: /configurations
+        native:
+          search-locations: classpath:/configurations
 
   datasource:
     url: jdbc:mysql://localhost:3306/configure
@@ -31,18 +28,7 @@ spring:
   main:
     allow-bean-definition-overriding: true
 
-logging:
-  level:
-    org: WARN
-    hibernate:
-      SQL: DEBUG
-      type:
-        descriptor: TRACE
-    blog: WARN
-    springframework: 
-      security: DEBUG
-
-# management:
-#   security:
-#     enabled: false
+management:
+  security:
+    enabled: false
  

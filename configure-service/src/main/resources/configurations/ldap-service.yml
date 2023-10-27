@@ -1,9 +1,8 @@
 spring:
   application:
     name: ldap-service
-   
-  config:
-    import: optional:configure-service:http://localhost:9191/
+  profiles:
+    active: pro
 
   datasource:
     url: jdbc:mysql://localhost:3306/ldap
@@ -26,3 +25,14 @@ spring:
       ldif: classpath:test-server.ldif
       base-dn: cn=admin,dc=example,dc=com
       port: 8389
+
+logging:
+  level:
+    org: WARN
+    hibernate:
+      SQL: DEBUG
+      type:
+        descriptor: TRACE
+    blog: WARN
+    springframework:
+      security: DEBUG

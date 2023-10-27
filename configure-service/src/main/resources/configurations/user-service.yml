@@ -2,10 +2,7 @@ spring:
   application:
     name: uaa-service
   profiles:
-    active: pro
-   
-  config:
-    import: optional:configure-service:http://localhost:9191/
+      active: pro
 
   datasource:
     url: jdbc:mysql://localhost:3306/uaa?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Turkey
@@ -19,6 +16,20 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
+        # dialect: org.hibernate.dialect.PostgreSQLDialect
+  main:
+    allow-bean-definition-overriding: true
+
+logging:
+  level:
+    org: WARN
+    hibernate:
+      SQL: DEBUG
+      type:
+        descriptor: TRACE
+    blog: WARN
+    springframework: 
+      security: DEBUG
 
 jwt:
   secret: "tz6sAA3jZxcamyqGVwShXl7MqACyE26WYRwrHl8FO1A="

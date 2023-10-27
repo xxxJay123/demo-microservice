@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   # Discovery Service
   discovery-service:
@@ -77,6 +77,18 @@ services:
     # Add environment variables if necessary
     environment:
       SPRING_PROFILES_ACTIVE: dev
+
+  # MySQL Service
+  mysql-service:
+    image: mysql:8.0 # Specify the appropriate version of MySQL image
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: Jay40984692$ # Replace with your MySQL root password
+      MYSQL_USER: root # Replace with your MySQL username
+      MYSQL_PASSWORD: Jay40984692$ # Replace with your MySQL user password
+    networks:
+      - my-network
 
 networks:
   my-network:

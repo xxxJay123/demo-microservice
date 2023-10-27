@@ -3,7 +3,6 @@
 C:.
 |   .dockerignore
 |   .gitignore
-|   dependency-tree.txt
 |   docker-compose.yml
 |   HELP.md
 |   mvnw
@@ -70,6 +69,13 @@ C:.
 |   |   |       |   banner.txt
 |   |   |       |   
 |   |   |       \---configurations
+|   |   |               discovery-service.yml
+|   |   |               gateway-service.yml
+|   |   |               ldap-service.yml
+|   |   |               product-service.yml
+|   |   |               test-server.ldif
+|   |   |               user-service.yml
+|   |   |               
 |   |   \---test
 |   |       \---java
 |   |           \---com
@@ -122,6 +128,129 @@ C:.
 |                       \---configureservice
 |                               ConfigureServiceApplicationTests.class
 |                               
++---demo-microservice
+|   +---configure-service
+|   |   \---target
+|   |       +---classes
+|   |       |   \---com
+|   |       |       \---xxxjay123
+|   |       |           \---configureservice
+|   |       |               \---configureservice
+|   |       +---generated-sources
+|   |       |   \---annotations
+|   |       +---generated-test-sources
+|   |       |   \---test-annotations
+|   |       \---test-classes
+|   |           \---com
+|   |               \---xxxjay123
+|   |                   \---configureservice
+|   |                       \---configureservice
+|   +---discovery-service
+|   |   \---target
+|   |       +---classes
+|   |       |   \---com
+|   |       |       \---xxxjay123
+|   |       |           \---discoveryservice
+|   |       |               \---discoveryservice
+|   |       +---generated-sources
+|   |       |   \---annotations
+|   |       +---generated-test-sources
+|   |       |   \---test-annotations
+|   |       \---test-classes
+|   |           \---com
+|   |               \---xxxjay123
+|   |                   \---discoveryservice
+|   |                       \---discoveryservice
+|   +---gateway-service
+|   |   \---target
+|   |       +---classes
+|   |       |   \---com
+|   |       |       \---xxxjay123
+|   |       |           \---gateway
+|   |       |               \---gatewayservice
+|   |       |                   \---filter
+|   |       +---generated-sources
+|   |       |   \---annotations
+|   |       +---generated-test-sources
+|   |       |   \---test-annotations
+|   |       \---test-classes
+|   |           \---com
+|   |               \---xxxjay123
+|   |                   \---gateway
+|   |                       \---gatewayservice
+|   +---ldap-service
+|   |   \---target
+|   |       +---classes
+|   |       |   \---com
+|   |       |       \---xxxjay123
+|   |       |           \---ldap
+|   |       |               \---ldapservice
+|   |       |                   +---config
+|   |       |                   +---controller
+|   |       |                   +---entity
+|   |       |                   +---exception
+|   |       |                   +---model
+|   |       |                   +---repository
+|   |       |                   +---service
+|   |       |                   \---utils
+|   |       +---generated-sources
+|   |       |   \---annotations
+|   |       +---generated-test-sources
+|   |       |   \---test-annotations
+|   |       \---test-classes
+|   |           \---com
+|   |               \---xxxjay123
+|   |                   \---ldap
+|   |                       \---ldapservice
+|   +---product-service
+|   |   \---target
+|   |       +---classes
+|   |       |   \---com
+|   |       |       \---xxxjay123
+|   |       |           \---productservice
+|   |       |               \---productservice
+|   |       |                   +---config
+|   |       |                   +---controller
+|   |       |                   +---entity
+|   |       |                   +---exception
+|   |       |                   +---model
+|   |       |                   +---repository
+|   |       |                   +---service
+|   |       |                   \---utils
+|   |       +---generated-sources
+|   |       |   \---annotations
+|   |       +---generated-test-sources
+|   |       |   \---test-annotations
+|   |       \---test-classes
+|   |           \---com
+|   |               \---xxxjay123
+|   |                   \---productservice
+|   |                       \---productservice
+|   \---uaa-service
+|       \---target
+|           +---classes
+|           |   \---com
+|           |       \---xxxjay123
+|           |           \---uaa
+|           |               \---uaaservice
+|           |                   +---config
+|           |                   +---controller
+|           |                   +---entity
+|           |                   |   \---Impl
+|           |                   +---exception
+|           |                   +---model
+|           |                   +---repository
+|           |                   +---service
+|           |                   \---utils
+|           +---generated-sources
+|           |   \---annotations
+|           +---generated-test-sources
+|           |   \---test-annotations
+|           \---test-classes
+|               \---com
+|                   \---xxxjay123
+|                       \---uaa
+|                           \---uaaservice
 +---discovery-service
 |   |   .gitignore
 |   |   Dockerfile
@@ -333,11 +462,8 @@ C:.
 |   |   |   |                   +---service
 |   |   |   |                   \---utils
 |   |   |   \---resources
-|   |   |       |   application.yml
-|   |   |       |   test-server.ldif
-|   |   |       |   
-|   |   |       +---static
-|   |   |       \---templates
+|   |   |           application.yml
+|   |   |           
 |   |   \---test
 |   |       \---java
 |   |           \---com
@@ -440,10 +566,8 @@ C:.
 |   |   |   |                   |       
 |   |   |   |                   \---utils
 |   |   |   \---resources
-|   |   |       |   application.yml
-|   |   |       |   
-|   |   |       +---static
-|   |   |       \---templates
+|   |   |           application.yml
+|   |   |           
 |   |   \---test
 |   |       \---java
 |   |           \---com
@@ -511,7 +635,6 @@ C:.
 \---uaa-service
     |   .gitignore
     |   Dockerfile
-    |   HELP.md
     |   mvnw
     |   mvnw.cmd
     |   pom.xml
@@ -575,9 +698,6 @@ C:.
     |                               UaaServiceApplicationTests.java
     |                               
     \---target
-        |   uaa-service-0.0.1-SNAPSHOT.jar
-        |   uaa-service-0.0.1-SNAPSHOT.jar.original
-        |   
         +---classes
         |   |   application.yml
         |   |   
@@ -621,9 +741,6 @@ C:.
         |   \---annotations
         +---generated-test-sources
         |   \---test-annotations
-        +---maven-archiver
-        |       pom.properties
-        |       
         +---maven-status
         |   \---maven-compiler-plugin
         |       +---compile
