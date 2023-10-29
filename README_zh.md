@@ -20,7 +20,7 @@
 1. **Git clone:**
 
     ```sh
-    git clone https://github.com/your-username/demo-microservice.git
+    git clone https://github.com/xxxJay123/demo-microservice.git
     cd demo-microservice
     ```
 
