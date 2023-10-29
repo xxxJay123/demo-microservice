@@ -1,9 +1,8 @@
 # Demo Microservice
 
-[中文版本](README_zh.md)
-
 Demo Microservice is a microservice-based application that provides functionality to manage products. It includes user authentication and authorization based on roles, allowing different levels of access to the API endpoints.
 
+[中文版本](README_zh.md)
 ## Prerequisites
 
 Ensure you have the following tools and technologies installed:
