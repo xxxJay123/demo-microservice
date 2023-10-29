@@ -93,8 +93,6 @@
 			<version>6.1.5</version>
 		</dependency>
 		<!--
-
-
 		https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-eureka-client -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>

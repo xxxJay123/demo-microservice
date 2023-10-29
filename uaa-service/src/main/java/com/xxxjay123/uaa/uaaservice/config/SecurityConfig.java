@@ -51,6 +51,7 @@ public class SecurityConfig {
             .requestMatchers(HttpMethod.POST, "/auth/login").permitAll()//
             .anyRequest().authenticated()//
         )//
+        //.oauth2Login()//
         .authenticationProvider(//
           authenticationProvider())//
         .addFilterBefore(jwtAuthenticationFilter,
