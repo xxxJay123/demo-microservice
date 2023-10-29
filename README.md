@@ -20,7 +20,7 @@ Ensure you have the following tools and technologies installed:
 1. **Clone the repository:**
 
     ```sh
-    git clone https://github.com/your-username/demo-microservice.git
+    git clone https://github.com/xxxJay123/demo-microservice.git
     cd demo-microservice
     ```
 
